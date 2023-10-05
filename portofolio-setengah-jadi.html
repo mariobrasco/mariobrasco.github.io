@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: 0;
+        text-decoration: 0;
+        scroll-behavior: smooth;
+        border: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body{
+        background-color: #081b29;
+        color: white;
+    }
+    .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+    .logo{
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+    }
+    .navbar a {
+        font-size: 18px;
+        color: white;
+        font-weight: 500;
+        margin-left: 35px;
+        transition: .3s;
+    }
+    .navbar a:hover{
+        color: rgb(0, 255, 255);
+        font-weight: 600;
+    }
+    .sect{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 10%;
+    }
+    .home-content{
+        max-width: 600px;
+    }
+    .home-content h1{
+        font-size: 50px;
+        font-weight: 700;
+    }
+    .home-content h3{
+        color: #00abf0;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .home-content p {
+        font-size: 16px;
+        margin: 20px 0 40px;
+    }
+    .home-content .btn-box{
+        display: flex;
+        justify-content: space-between;
+        width: 340px;
+        height: 47px;
+    }
+    .btn-box a{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 100%;
+        color: #081b29;
+        background-color: aqua;
+        border: 2px solid aqua;
+        border-radius: 8px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: .3s;
+    }
+    .btn-box a:hover{
+        color: aqua;
+        background-color: #081b29;
+    }
+    img{
+        position: absolute;
+        margin-left: 57%;
+        margin-top: -270px;
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+    }
+</style>
+<body>
+     <header class="header">
+        <a href="" class="logo">Mario.</a>
+
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Project</a>
+            <a href="#">Contact</a>
+        </nav>
+     </header>
+     
+     <section class="sect">
+        <div class="home-content">
+            <h1>Hi, I'm Mario Brasco </h1>
+            <h3>Just a kid who wants to be Front-End Developer</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam voluptas nisi fugit pariatur quo tempora ut, in sit? Provident, numquam quia ducimus quisquam animi nemo aperiam enim velit fugiat facilis.</p><br>
+            <div class="btn-box">
+                <a href="">Hire Me</a>
+                <a href="">Let's Talk</a>
+            </div>
+            <img src="mario1.jpg">
+        </div>
+     </section>
+     
+</body>
+</html>
