@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pengisian Biodata</title>
+  </head>
+  <script type="text/javascript"> 
+
+    function datakab(){ 
+    
+        let div = document.getElementById("mykec"); div.replaceChildren();   // membersihkan div
+    
+        kab = document.getElementById("mykab").options[mykab.selectedIndex].text ;
+    
+        var isikec=[];
+        if  (kab == "Kota Bandung"){
+          isikec[0]="-";
+          isikec[1]="Kiaracondong";
+          isikec[2]="Buah batu";
+        }else if  (kab == "Kab. Bandung"){
+          isikec[0]="-";
+          isikec[1]="Cileunyi";
+          isikec[2]="Cibiru";
+        }
+     
+        for(i=0; i<isikec.length; i=i+1){
+                var opt = document.createElement("option"); 
+                opt.text = isikec[i];
+                opt.value = isikec[i]; 
+        //Load the dynamically  dropdown kecamatan
+            var container=document.getElementById("mykec");
+            container.appendChild(opt); 
+            }
+    } 
+    
+    function datakec(){ 
+        let div = document.getElementById("mykel"); div.replaceChildren();   // membersihkan div
+    
+        kec = document.getElementById("mykec").options[mykec.selectedIndex].text ;
+    
+        var isikel=[];
+        if  (kec == "Kiaracondong"){
+            isikel[0]="-";
+            isikel[1]="Sukapura";
+            isikel[2]="Cidurian";
+    
+        }else if  (kec == "Buah batu"){
+            isikel[0]="-";
+            isikel[1]="Jati Sari";
+            isikel[2]="Suka Pura";
+    
+        }else if  (kec == "Cileunyi"){
+            isikel[0]="-";
+            isikel[1]="Cimekar";
+            isikel[2]="Cinunuk";
+    
+        }else if  (kec == "Cibiru"){
+            isikel[0]="-";
+            isikel[1]="Cibangkonol";
+            isikel[2]="Sindang Reret";
+          }
+     
+        for(i=0; i<isikel.length; i=i+1){
+                var opt = document.createElement("option"); 
+                opt.text = isikel[i];
+                opt.value = isikel[i]; 
+        //Load the dynamically  dropdown kecamatan
+            var container=document.getElementById("mykel");
+            container.appendChild(opt); 
+          }
+    } 
+    </script> 
+  <style>
+    *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+    }
+    body{
+       color: white;
+       background: linear-gradient(100deg,#9EB384,#CEDEBD );
+       margin-top: 110px;   
+    }
+    .container{
+        border-radius: 10px;
+        margin: auto;
+        border: 1px solid #9EB384;
+        height: 400px;
+        width: 380px;
+        box-shadow:  10px 10px 15px 5px #9EB384;
+    }
+    h2{
+        text-transform: uppercase;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    label{
+        font-size: 18px;
+        margin-left: 55px;
+    }
+    .nik, .name, .kota, .desa{
+        color: #435334;
+        width: 190px;
+    }
+    input, select{
+        border: transparent;
+    }
+    .kota, .desa, .camat{
+        width: 110px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+
+        <h2>Biodata Penduduk</h2><br>
+        
+        <label>NIK &nbsp&nbsp&nbsp : </label>
+        <input type="number" class="nik" /><br /><br>   
+        
+        <label>Nama : </label>
+        <input type="text" class="name" /><br /><br>    
+        
+        <label>Kota/Kabupaten : </label>
+        <select class="kota" name="mykab" id="mykab" onChange="datakab()">
+            <option> </option>
+            <option>Kota Bandung</option>
+            <option>Kab. Bandung</option>
+        </select><br><br>
+
+        <label>Kecamatan&nbsp : </label>
+            <select class="camat" name="datakecamatan" id="mykec" onChange="datakec()">
+                <div id="mykec"></div>  
+            </select><br><br>
+
+        <label>Kelurahan&nbsp&nbsp : </label>
+            <select class="desa" name="datakeluarahan" id="mykel" onChange="datakel()">
+                <div id="mykel"></div>
+            </select>
+    </div>
+</body>
+</html>
